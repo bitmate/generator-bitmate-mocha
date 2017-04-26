@@ -1,0 +1,51 @@
+{
+  "name": "@oligibson/generator-bitmate-mocha",
+  "version": "1.0.5",
+  "description": "BitMate generator for handling Mocha config",
+  "homepage": "http://bitmate.io/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oligibson/generator-bitmate-mocha.git"
+  },
+  "author": "BitMate",
+  "main": "index.js",
+  "dependencies": {
+    "@oligibson/bitmate-generator": "^1.0.5"
+  },
+  "devDependencies": {
+    "ava": "^0.18.2",
+    "babel-eslint": "^7.1.1",
+    "chai": "^3.5.0",
+    "chai-spies": "^0.7.1",
+    "cross-spawn": "^5.0.1",
+    "eslint": "^3.15.0",
+    "eslint-config-xo-space": "^0.15.0",
+    "eslint-plugin-babel": "^4.0.1",
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-eslint": "^3.0.1",
+    "gulp-exclude-gitignore": "^1.1.1",
+    "gulp-nsp": "^2.4.2",
+    "nyc": "^10.1.2"
+  },
+  "ava": {
+    "files": [
+      "test/**/*.js"
+    ]
+  },
+  "nyc": {
+    "include": [
+      "generators/**/*.js"
+    ],
+    "exclude": [
+      "generators/**/templates/**"
+    ]
+  },
+  "scripts": {
+    "test": "gulp",
+    "prepublish": "gulp prepublish"
+  },
+  "eslintConfig": {
+    "extends": "xo-space/esnext"
+  },
+  "license": "UNLICENSED"
+}
